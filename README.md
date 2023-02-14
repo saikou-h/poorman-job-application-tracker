@@ -19,5 +19,5 @@ You enter the information (they are all considered strings to be written into th
 The position can have a linked embedded so you can click that and remind yourself what kind of role it is.
 
 
-## End
-Good luck to all of ourselves. We will not lose and we will have our triumph!
+## What I have to say
+Sorry I didn't have the luxury of time making this a fancy one. I need to spend my energy looking for my next job to keep the food on the table for my family. Good luck to all of ourselves. We will not lose and we will have our triumph!
