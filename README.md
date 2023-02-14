@@ -6,7 +6,7 @@ Track my job applications. Organize companies/positions/work type etc.
 
 
 ## How to use
-It's a very broken but I still find it useful. You need to have Python installed and you will need to put main.py, main.ui and a spreadsheet Tracker.xlsx in the same directory. The Tracker.xlsx needs to have the header ready in the following order: No., Company Name, Position, Work Type, Location, Salary Range, Application Submitted, Submission Date, Source, Note. You can add more columns after them but they will not be handled by this tracker.
+It's a very broken but I still find it useful. You need to have Python installed and you will need to put main.py, main.ui and a spreadsheet Tracker.xlsx in the same directory. The Tracker.xlsx needs to have the header ready in the following order: No., Company Name, Position, Work Type, Location, Salary Range, Application Submitted, Submission Date, Source, Note. There is a sample spreadsheet in the repository for your reference and you will have to remove the affix so the file name is "Tracker.xlsx". You can add more columns after them but they will not be handled by this tracker.
 
 You use this by running main.py and you will (hopefully) see the GUI below:
 
