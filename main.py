@@ -13,6 +13,8 @@ from PyQt5 import QtWidgets, uic
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 import openpyxl
+import pandas as pd
+from dataframe_model import PandasModel
 
 
 class Ui_MainWindow(QtWidgets.QMainWindow):
@@ -25,6 +27,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         # setting up
         self.setWindowTitle("Job application tracker")
         self.submissionDate.setDate(QDate.currentDate())
+        self.tv = QtWidgets.QTableView()
         
         # calling method
         self.ui_components()
@@ -35,6 +38,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         # add_button = QPushButton("addButton", self)
         self.addButton.clicked.connect(self.add_to_log)
         self.resetButton.clicked.connect(self.reset_ui)
+        self.reviewButton.clicked.connect(self.review_application)
         
     
     def add_to_log(self):
@@ -85,6 +89,11 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         log_sheet.cell(row=curr_index+1, column=9).value = text_source
         log_sheet.cell(row=curr_index+1, column=10).value = text_note
         log_file.save(self.path / self.log_filename)
+        QtWidgets.QMessageBox.about(
+            self, "Confirmation", "Application to {} at {} has been saved!".format(
+                text_position, text_company    
+            )
+        )
         
         
     def reset_ui(self):
@@ -100,6 +109,16 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         self.sourceText.setText("")      
         self.noteText.setText("")
     
+    def review_application(self):
+        """
+        To be implemented. This button displays a dataframe with entries 
+        currently in the tracker spreadsheet
+
+        Returns
+        -------
+        None.
+
+        """
         
         
 
